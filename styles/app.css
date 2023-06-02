@@ -1,0 +1,272 @@
+
+/* El valor border-box en el box-sizing
+hace que el padding y el border
+pasen a formar parte del cálculo del
+ancho de la caja y no lo suman posteriormente */
+* {
+    box-sizing: border-box;
+  }
+
+  /* superpone un color */
+  .row::after {
+    content: "";
+    clear: both;
+    display: block;
+  }
+
+  
+
+/* estilos letra */
+html {
+    font-family: "Lucida Sans", sans-serif;
+
+    
+  }
+
+
+/* Style the body */
+body {
+    font-family: Arial;
+    margin: 0;
+
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    /* opacity: 0.8; */
+    background-image: url('../images/textura19.jpg');
+
+    /* complementos para posicionar el footer siempre abajo sin importar si se agrega o quita contenido al body */
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
+  }
+
+
+  
+  /* Header/Logo Title */
+  .header  {
+    padding: 3px;
+    text-align: left;
+    background: #0e182b;
+    color: white;
+    font-size: 10px;
+    font-family: Copperplate, Papyrus, fantasy;
+  }
+
+  .subtexto {
+    margin-top: -18px;
+  }
+
+  .subtexto, .texto{
+    margin-left: 160px;
+  }
+
+  .container {
+    position: relative;
+    display: table; /*** Used for container align center ***/
+    width: 100%;
+    height: 100%; /***altura responsive***/
+    max-width: 100rem;
+    max-height: 100rem;
+    margin: 2.5% auto 5% auto;
+    padding: 80px 10px 50px 10px;
+    /* padding-top: 140px; */
+    border: 5px solid rgb(123, 115, 77);
+    border-radius: 12px;
+    margin-top: 0px;
+    background-repeat: no-repeat;
+    background-size:  100% 100%;
+   
+    background-image: url('../images/textura2.jpg');
+    
+
+}
+  
+  /* cajas */
+  .aside {
+    /* background-color: #e2e4e6; */
+    padding: 15px;
+    /* color: #ffffff; */
+    text-align: center;
+    font-size: 14px;
+
+    /* box-shadow: 0 1px 3px rgba(105, 104, 104, 0.12), 0 12px 12px rgba(109, 108, 108, 0.24);
+    border: 1px solid rgb(123, 115, 77);
+    border-radius: 10px; */
+
+    
+    border: 0 none;
+    background: transparent;
+    
+  }
+
+   .textArea{
+    width: 100%;
+    height: 30rem;
+    font-family: Copperplate, Papyrus, fantasy; 
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 50px;
+    text-align: left;
+    
+    /* border: 1px solid rgb(123, 115, 77);
+    border-radius: 10px; */
+
+    border: 0 ;
+    background: transparent;
+    color: rgb(181, 152, 8);
+    outline: none; /*  quita el borde interno del textarea  */
+  }
+
+  #textarea2{
+    padding-top: 120px;
+    padding-left: 60px;
+  }
+
+
+
+
+
+/* scroll del textarea personalizado */
+
+  /* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* barra */
+::-webkit-scrollbar-thumb {
+  background: rgb(6, 255, 2); 
+  border-radius: 10px;
+}
+
+/* barra on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000; 
+}
+
+/* --------------------------------------------------------------- */
+
+
+
+
+
+  
+
+  /* responsive con media query */
+  [class*="col-"] {
+    float: left;
+    padding: 15px;
+  }
+
+  /* For desktop: */
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+
+ 
+
+
+}
+
+
+/* ------------------------------------------------------------------- */
+
+ .cssButton1{
+   color: rgb(118, 109, 7);
+   width: 10rem;
+   padding: 2px;
+   border: 3px solid rgb(98, 87, 4);
+   border-radius: 12px;
+   margin-top: -7px;
+   margin-right: 20px;
+   margin-left: 50px;
+  
+   font-family: Copperplate, Papyrus, fantasy;
+   font-size: 20px;
+   /* background: transparent; */
+   border: none;
+   cursor: pointer;
+   
+}
+
+.cssButton2{
+  color: rgb(251, 251, 249);
+  width: 10rem;
+  padding: 2px;
+  /* border: 3px solid rgb(123, 115, 77); */
+  border-radius: 12px;
+  margin-top: -7px;
+  font-family: Copperplate, Papyrus, fantasy;
+  font-size: 20px;
+  /* background: transparent; */
+  border: none;
+  background: rgb(38, 39, 38);
+  cursor: pointer; 
+}
+
+
+
+.buttonCopiar{
+  color: rgb(118, 109, 7);
+  width: 10rem;
+  padding: 2px;
+  border: 3px solid rgb(123, 115, 77);
+  border-radius: 12px;
+  margin-top: -7px;
+  margin-left: 125px;
+  font-family: Copperplate, Papyrus, fantasy; 
+  font-size: 20px;
+  /* background: transparent; */
+  background: rgb(247, 247, 247);
+  cursor: pointer;
+  border: none;
+}
+  
+
+.cssButton1:hover, .cssButton2:hover, .buttonCopiar:hover{
+    text-shadow: 1px 1px 1px rgb(98, 96, 28), 0 0 5px rgb(255, 255, 255), 0 0 5px rgb(252, 253, 252);
+}
+
+/* desplaza el boton hacia abajo al dar clic */
+.cssButton1:active, .cssButton2:active, .buttonCopiar:active {
+  background-color: #ffffff;
+  box-shadow: 0 5px #a4a3a3;
+  transform: translateY(4px);
+}
+
+  
+  .footer {
+    background-color: #fbfbfb;
+    color: #1c1b1b;
+    text-align: center;
+    font-size: 12px;
+    padding:  0;
+    font-family: Copperplate, Papyrus, fantasy;
+    
+    /* mantiene el footer abajo */
+    /* position: absolute;
+    bottom: 0; */
+    width: 100%;
+    height: 2.4rem;
+  }
